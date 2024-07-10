@@ -6,13 +6,12 @@ on:
       - enable_azure
 
 jobs:
-  example_matrix:
+  Windows:
     strategy:
       matrix:
         os: [ubuntu-22.04, ubuntu-20.04]
-        version: [10, 12, 14]
-    Windows:
-      runs-on: windows-2019
+        version: [10, 12, 14]  
+    runs-on: windows-2019
     steps:
       - uses: actions/setup-python@v5
         with:
